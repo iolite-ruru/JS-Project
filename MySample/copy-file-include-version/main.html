@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- sweetalert2 START -->
+    <link type="text/css" rel="stylesheet" href="sweetalert2.css" /><!-- 알럿창 스타일 -->
+    <script type="text/javascript" src="sweetalert2.js"></script> <!-- 알럿창 플러그인 -->
+    <script type="text/javascript" src="es6-promise.js"></script> <!-- 알럿창 _IE작동 -->
+
+    <!-- sweetalert2 END -->
+    <script>
+        function info_click() {
+            swal({
+                title : "info",
+                text : "info 하였습니다.",
+                type : "info"
+            });
+        }
+        function success_click() {
+            swal({
+                title : "success",
+                text : "success 하였습니다.",
+                type : "success"
+            });
+        }
+        function warning_click() {
+            swal({
+                title : "warning",
+                text : "warning 하였습니다.",
+                type : "warning"
+            });
+        }
+        function error_click() {
+            swal({
+                title : "error",
+                text : "error 하였습니다",
+                type : "error"
+            });
+        }
+        function question_click() {
+            swal({
+                title : "question",
+                text : "question 하였습니다",
+                type : "question"
+            });
+        }
+        function fire_click() {
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+            )
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="info_click()">info 버튼</button>
+    <button onclick="success_click()">success 버튼</button>
+    <button onclick="warning_click()">warning 버튼</button>
+    <button onclick="error_click()">error 버튼</button>
+    <button onclick="question_click()">question 버튼(자바스크립트 코드 참고)</button>
+    <button onclick="fire_click()">요약해서 쓰는 버튼(자바스크립트 코드 참고)</button>
+</body>
+</html>
