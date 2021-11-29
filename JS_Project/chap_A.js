@@ -10,7 +10,7 @@ let char_0 = "img/char1_0.png";
 let char_right = ["img/char1_1.png", "img/char1_2.png", "img/char1_1.png", "img/char1_3.png"];
 let char_left = ["img/char1_4.png", "img/char1_5.png", "img/char1_4.png", "img/char1_6.png"];
 
-let playTime = 1000; //플레이 타임: 30초
+let playTime = 30000; //플레이 타임: 30초
 
 let game = true;
 let walkTimer = 0;
@@ -116,9 +116,7 @@ function fail(){
         text: "게임 클리어에 실패하였습니다.",
         footer: "OK 버튼을 누르면 게임 시작 화면으로 돌아갑니다"
     }).then(()=>{
-        localStorage.setItem("clear_A", false);
-        //window.history.forward();
-        //window.location.href="main.html";
+        window.location.href="main.html";
     })
 }
 function success(){
@@ -134,11 +132,10 @@ function success(){
         confirmButtonColor: "#926fe2",
         confirmButtonText: "선택하기"
     }).then(()=>{
-        //스토리진행
         let theme = document.querySelector("input[name='theme']:checked").id;
         localStorage.setItem("theme", theme);
         localStorage.setItem("clear_A", true);
-        window.location.href="map.html";
+        window.location.href="map2.html";
     })
 }
 document.addEventListener("keydown", function(event) {

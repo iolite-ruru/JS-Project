@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <title>프로젝트 뭐 하지?</title>
-    <!--<script src="main.js" defer></script>-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>프로젝트 뭐 하지?</title>
     <style>
         body{
+            padding: 90px;
+            background:repeating-linear-gradient(45deg,slateblue, slateblue 15px, rgb(98, 100, 218) 0, rgb(98, 100, 218) 15px);
             background-color:slateblue;
+            display: flex;
+            justify-content: center;
+
+        }
+        canvas{
+            background-image: url('img/chap03_background.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
     </style>
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script>
-        window.onload = function(){
-            Swal.fire({
-                    imageUrl: "img/time.png",
-                    imageWidth: 400,
-                    imageHeight: 200,
-                    title: '"작품을 제출하러 가자!"',
-                    width: 620,
-                    background: '#e1d8f6',
-                    html:
-                        '<h2>게임방법</h2>'
-                        +'🗸키보드의 <b>스페이스 바</b>를 누르면 캐릭터가 <b>점프</b>합니다.'
-                        +'<br>🗸<b>장애물</b>을 피해서 무사히 교무실에 도착하세요.'
-                        +'<br>🗸오른쪽 상단에 있는 <b>하트</b>🧡가 모두 사라지면 게임 클리어에 실패하게 됩니다.'
-            }).then(()=>{
-                //게임 실행 함수
-                start();
-            })
-        }
-    </script>
+    </head>
+    <body>
+        
+        <canvas id="canvas"></canvas>
+        <script src="chap_C.js"></script>
+    </body>
 </html>
